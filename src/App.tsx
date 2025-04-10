@@ -10,6 +10,9 @@ import Profile from "./pages/Profile";
 import PlaceholderPage from "./pages/PlaceholderPage";
 import NotFound from "./pages/NotFound";
 import AdminDashboard from "./pages/AdminDashboard";
+import Analytics from "./pages/Analytics";
+import Resources from "./pages/Resources";
+import Reports from "./pages/Reports";
 
 // Create a client
 const queryClient = new QueryClient();
@@ -27,9 +30,9 @@ const App = () => (
             <Route path="/profile" element={<Profile />} />
             <Route path="/appointments" element={<PlaceholderPage />} />
             <Route path="/health" element={<PlaceholderPage />} />
-            <Route path="/analytics" element={<PlaceholderPage />} />
-            <Route path="/resources" element={<PlaceholderPage />} />
-            <Route path="/reports" element={<PlaceholderPage />} />
+            <Route path="/analytics" element={<Analytics />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="/reports" element={<Reports />} />
             <Route path="/settings" element={<PlaceholderPage />} />
             <Route path="/help" element={<PlaceholderPage />} />
             <Route path="*" element={<NotFound />} />
