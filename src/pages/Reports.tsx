@@ -48,9 +48,11 @@ const Reports = () => {
     return reports
       .filter(report => report.name.toLowerCase().includes(searchTerm.toLowerCase()))
       .sort((a, b) => {
-        return sortAscending 
-          ? new Date(a.date) - new Date(b.date) 
-          : new Date(b.date) - new Date(a.date);
+        if (sortAscending) {
+          return new Date(a.date).getTime() - new Date(b.date).getTime();
+        } else {
+          return new Date(b.date).getTime() - new Date(a.date).getTime();
+        }
       });
   };
 
